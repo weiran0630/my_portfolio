@@ -29,7 +29,7 @@
 	<div class="stat">
 		<div class="stat-title">Liked Frameworks</div>
 		{#key framework.name}
-			<div class={`stat-value text-${framework.color}-500`} in:fade>
+			<div class={`stat-value text-secondary`} in:fade>
 				{framework.name}
 			</div>
 			<div class={`stat-desc `}>{framework.description}</div>
