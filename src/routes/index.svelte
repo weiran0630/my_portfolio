@@ -21,7 +21,6 @@
 <script lang="ts">
 	import ProjectContainer from '$lib/components/project-container.svelte';
 	import AuthorContainer from '$lib/components/author-container.svelte';
-	import ThemeSwitcher from '$lib/components/theme-switcher.svelte';
 
 	export let projects: Project[];
 	export let authors: Author[];
@@ -32,8 +31,6 @@
 </svelte:head>
 
 <h1 class="font-bold text-center mb-20 text-5xl">Welcome to my Portfolio 😆</h1>
-
-<ThemeSwitcher />
 
 <AuthorContainer {authors} />
 
