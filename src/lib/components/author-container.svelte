@@ -2,7 +2,6 @@
 	import type { Author } from '$lib/models/author';
 
 	export let authors: Author[] = [];
-
 	const {
 		name,
 		intro,

@@ -2,7 +2,7 @@
 	import ThemeSwitcher from '$lib/components/theme-switcher.svelte';
 </script>
 
-<div class="navbar mb-5">
+<div class="navbar w-full mx-2">
 	<div class="flex-1 items-center select-none">
 		<span class="font-bold text-xl hidden sm:inline-block mr-3">🚀 Edison Web Dev </span>
 
@@ -19,6 +19,6 @@
 			Contact
 		</button>
 
-		<div class="ml-auto"><ThemeSwitcher /></div>
+		<div class="ml-auto mr-4"><ThemeSwitcher /></div>
 	</div>
 </div>

@@ -6,7 +6,8 @@
 </script>
 
 <h1 class="font-bold text-center mb-20 text-5xl">Recent Projects 👨🏻‍💻</h1>
-<div class="flex flex-wrap gap-5 justify-center">
+
+<div class="flex flex-wrap justify-center gap-10">
 	{#each projects as { name, demo, sourceCode, description, image, tags }}
 		<ProjectCard {name} {description} url={image[0].url} {demo} {tags} {sourceCode} />
 	{/each}
