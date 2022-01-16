@@ -1,0 +1,23 @@
+<script lang="ts">
+	import Tags from './tags.svelte';
+
+	export let title: string = '';
+	export let slug: string = '';
+	export let intro: string = '';
+	export let tags: string[] = [];
+</script>
+
+<div class="card lg:card-side select-none">
+	<div class="card-body">
+		<h2 class="card-title">{title}</h2>
+		<p class="text-sm">
+			{intro.slice(0, 80)}...
+		</p>
+		<div class="card-actions">
+			<div class="flex gap-2 flex-wrap mt-3">
+				<Tags {tags} variant="secondary" />
+			</div>
+			<a class="btn btn-primary btn-sm ml-auto" href={`/blog/${slug}`}>Read More</a>
+		</div>
+	</div>
+</div>
