@@ -1,42 +1,40 @@
 <!-- Grab the data from API before the page mount (loads) -->
 <script lang="ts" context="module">
 	import type { Load } from '@sveltejs/kit';
-	import { gql } from 'graphql-request';
+	import type { Project } from '$lib/models/projects';
+	import type { Author } from '$lib/models/author';
 	import { client } from '$lib/graphql-client';
-	import ProjectCard from '$lib/components/project-card.svelte';
+	import { authorsQuery, projectsQuery } from '$lib/queries';
 
 	export const load: Load = async () => {
-		const query = gql`
-			query GetProjects {
-				projects {
-					name
-					slug
-					description
-					demo
-					sourceCode
-					image {
-						url
-					}
-				}
-			}
-		`;
-
-		const { projects } = await client.request(query);
+		const [{ authors }, { projects }] = await Promise.all([
+			client.request(authorsQuery),
+			client.request(projectsQuery)
+		]);
 
 		return {
-			props: { projects }
+			props: { projects, authors }
 		};
 	};
 </script>
 
 <script lang="ts">
-	export let projects;
+	import ProjectContainer from '$lib/components/project-container.svelte';
+	import AuthorContainer from '$lib/components/author-container.svelte';
+	import ThemeSwitcher from '$lib/components/theme-switcher.svelte';
+
+	export let projects: Project[];
+	export let authors: Author[];
 </script>
 
-<h1>Recent Projects</h1>
+<svelte:head>
+	<title>🚀 Edison | Web Dev Portfolio</title>
+</svelte:head>
 
-<div>
-	{#each projects as { name, slug, description, image }}
-		<ProjectCard {name} {description} url={image[0].url} {slug} />
-	{/each}
-</div>
+<h1 class="font-bold text-center mb-20 text-5xl">Welcome to my Portfolio 😆</h1>
+
+<ThemeSwitcher />
+
+<AuthorContainer {authors} />
+
+<ProjectContainer {projects} />
