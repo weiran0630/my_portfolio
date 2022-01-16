@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	const frameworks = [
 		{ name: 'Next.js', description: 'Everyone uses it, so do I.', color: 'black' },
@@ -11,7 +12,7 @@
 	let index = 0;
 	const interval = setInterval(() => {
 		index = (index + 1) % frameworks.length;
-	}, 2500);
+	}, 3000);
 
 	onDestroy(() => clearInterval(interval));
 
@@ -27,7 +28,11 @@
 
 	<div class="stat">
 		<div class="stat-title">Liked Frameworks</div>
-		<div class={`stat-value text-${framework.color}-500`}>{framework.name}</div>
-		<div class={`stat-desc `}>{framework.description}</div>
+		{#key framework.name}
+			<div class={`stat-value text-${framework.color}-500`} in:fade>
+				{framework.name}
+			</div>
+			<div class={`stat-desc `}>{framework.description}</div>
+		{/key}
 	</div>
 </div>
