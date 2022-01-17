@@ -19,7 +19,7 @@
 	$: framework = frameworks[index];
 </script>
 
-<div class="stats border-2 stats flex flex-wrap sm:flex-nowrap mx-auto max-w-2xl mb-20">
+<div class="stats border-2 stats flex flex-wrap sm:flex-nowrap mx-auto max-w-2xl mb-20 select-none">
 	<div class="stat">
 		<div class="stat-title">Prefered Language</div>
 		<div class="stat-value text-primary">TypeScript</div>

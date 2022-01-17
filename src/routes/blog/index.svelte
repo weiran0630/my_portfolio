@@ -25,7 +25,7 @@
 	<title>🚀 Edison | The Blog</title>
 </svelte:head>
 
-<h1 class="font-bold text-center my-10 text-5xl">Blog Posts 📖</h1>
+<h1 class="font-bold text-center my-10 text-5xl select-none">Blog Posts 📖</h1>
 
 <!-- <input
 	type="text"
