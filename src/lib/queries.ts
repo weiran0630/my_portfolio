@@ -59,6 +59,9 @@ export const postQuery = gql`
 			content
 			authors {
 				name
+				picture {
+					url
+				}
 			}
 		}
 	}

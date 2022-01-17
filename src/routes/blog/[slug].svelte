@@ -2,7 +2,6 @@
 	import { client } from '$lib/graphql-client';
 	import type { Post } from '$lib/models/post';
 	import { postQuery } from '$lib/queries';
-	import { marked } from 'marked';
 
 	export const load = async ({ params }) => {
 		const { slug } = params;
@@ -21,31 +20,46 @@
 	import BackToTop from '$lib/components/back-to-top.svelte';
 	import Tags from '$lib/components/tags.svelte';
 	import SvelteMarkdown from 'svelte-markdown';
+	import Code from '$lib/components/code.svelte';
 
 	export let post: Post;
 	const { title, date, tags, content, coverImage, authors } = post;
 </script>
 
 <svelte:head>
-	<title>Blog | {title}</title>
+	<title>📖 Blog | {title}</title>
 </svelte:head>
 
 <article class="prose prose-lg select-none">
-	<a class=" no-underline flex items-center gap-2 text-xl" href="/blog"
-		><span class="text-2xl">⬅</span>Previous Page</a
-	>
+	<a class=" no-underline flex items-center gap-2 text-xl mt-10" href="/blog">
+		<span class="text-2xl">⬅</span>Previous Page
+	</a>
 	<figure>
 		<img src={coverImage.url} alt="" />
 	</figure>
 
-	<div class="mb-5">
-		<div class="flex gap-2 flex-wrap mt-3 mb-2">
-			<Tags {tags} variant="secondary" />
-		</div>
-		<span class="block">{date} <br /> {authors[0].name}</span>
+	<div class="flex gap-2 flex-wrap">
+		<Tags {tags} variant="primary" size="lg" />
 	</div>
 
-	<SvelteMarkdown source={content} />
+	<div class="pb-5">
+		<div class="flex items-center gap-3">
+			<img
+				src={authors[0].picture.url}
+				width="50px"
+				height="50px"
+				alt=""
+				class="btn-circle btn-lg"
+			/>
+
+			<div class="flex flex-col">
+				<span class="font-bold"><span class="font-light">Author:</span> {authors[0].name}</span>
+				<span class="block font-light text-sm">{date} </span>
+			</div>
+		</div>
+	</div>
+
+	<SvelteMarkdown source={content} renderers={{ code: Code }} />
 </article>
 
 <BackToTop />

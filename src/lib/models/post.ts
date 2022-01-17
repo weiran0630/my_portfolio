@@ -4,6 +4,11 @@ export interface CoverImage {
 
 export interface Author {
 	name: string;
+	picture: Picture;
+}
+
+export interface Picture {
+	url: string;
 }
 
 export interface Post {

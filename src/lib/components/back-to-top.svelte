@@ -26,7 +26,7 @@
 <svelte:window on:scroll={handleOnScroll} />
 
 <div
-	class="back-to-top btn btn-md btn-primary select-none right-10 bottom-10 fixed shadow-lg"
+	class="back-to-top btn btn-md btn-secondary select-none right-10 bottom-10 fixed shadow-lg"
 	on:click={goTop}
 	class:hidden
 >

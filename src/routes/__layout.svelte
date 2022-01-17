@@ -12,10 +12,12 @@
 	});
 </script>
 
-<Navbar />
 <main class="container max-w-5xl mx-auto px-4 mt-5 mb-20 items-center">
+	<Navbar />
+
 	<PageTransitions refresh={$page.url.pathname}>
 		<slot />
 	</PageTransitions>
 </main>
+
 <Footer />
