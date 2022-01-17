@@ -5,7 +5,7 @@
 </script>
 
 <footer class="p-10 footer bg-neutral text-neutral-content">
-	<div>
+	<div class="max-w-5xl mx-auto">
 		<a href="https://kit.svelte.dev/"
 			><svg
 				height="50px"
@@ -53,7 +53,8 @@
 			<br />a framework for building web applications of all sizes
 		</p>
 	</div>
-	<div>
+
+	<div class="mx-auto">
 		<span class="footer-title">Contact me</span>
 		<div class="grid grid-flow-col gap-4">
 			<a href="https://www.facebook.com/shio.asanagi/">
