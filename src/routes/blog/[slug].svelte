@@ -30,7 +30,7 @@
 	<title>📖 Blog | {title}</title>
 </svelte:head>
 
-<article class="prose prose-lg select-none">
+<article class="prose prose-lg select-none mb-48">
 	<a class=" no-underline flex items-center gap-2 text-xl mt-10" href="/blog">
 		<span class="text-2xl">⬅</span>Previous Page
 	</a>
