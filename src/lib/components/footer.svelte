@@ -4,7 +4,7 @@
 	import { faAt } from '@fortawesome/free-solid-svg-icons';
 </script>
 
-<footer class="p-10 footer bg-neutral text-neutral-content">
+<footer class="p-10 footer bg-neutral text-neutral-content ">
 	<div class="max-w-5xl mx-auto">
 		<a href="https://kit.svelte.dev/"
 			><svg
