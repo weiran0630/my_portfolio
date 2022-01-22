@@ -7,7 +7,7 @@
 	});
 </script>
 
-<div class="ads-widget-container">
+<div class="ads-widget-container mt-20">
 	<ins
 		class="adsbygoogle"
 		style="display:block"
