@@ -26,8 +26,6 @@
 		if (e.detail.inView && hasMore) {
 			const { posts: nextPosts } = await client.request(postsQuery(5, pageSize));
 
-			console.log(nextPosts);
-
 			if (nextPosts.length > 0) {
 				pageSize += 5;
 				posts = [...posts, ...nextPosts];
