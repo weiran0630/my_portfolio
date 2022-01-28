@@ -4,7 +4,7 @@
 	import { postsQuery } from '$lib/queries';
 
 	export const load = async () => {
-		const { posts } = await client.request(postsQuery);
+		const { posts } = await client.request(postsQuery(5, 0));
 
 		return {
 			props: {
@@ -16,9 +16,26 @@
 
 <script lang="ts">
 	import PostCard from '$lib/components/post-card.svelte';
-	export let posts: Post[];
+	import { inview } from 'svelte-inview/dist/index';
 
-	posts = posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+	export let posts: Post[];
+	let pageSize = 5;
+	let hasMore = true;
+
+	const handleChange = async (e) => {
+		if (e.detail.inView && hasMore) {
+			const { posts: nextPosts } = await client.request(postsQuery(5, pageSize));
+
+			console.log(nextPosts);
+
+			if (nextPosts.length > 0) {
+				pageSize += 5;
+				posts = [...posts, ...nextPosts];
+			} else {
+				hasMore = false;
+			}
+		}
+	};
 </script>
 
 <svelte:head>
@@ -27,13 +44,8 @@
 
 <h1 class="font-bold text-center my-10 text-5xl select-none">Blog Posts 📖</h1>
 
-<!-- <input
-	type="text"
-	placeholder="Search here..."
-	class="input input-primary input-bordered"
-	bind:value={searchTerm}
-/> -->
-
 {#each posts as post}
 	<PostCard {...post} />
 {/each}
+
+<div use:inview={{}} on:change={handleChange} />

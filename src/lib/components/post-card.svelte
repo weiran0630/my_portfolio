@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Tags from './tags.svelte';
+	import { fade } from 'svelte/transition';
 
 	export let title: string = '';
 	export let slug: string = '';
@@ -7,7 +8,7 @@
 	export let tags: string[] = [];
 </script>
 
-<div class="card lg:card-side select-none">
+<div class="card lg:card-side select-none" transition:fade>
 	<div class="card-body">
 		<h2 class="card-title">{title}</h2>
 		<p class="text-sm">
