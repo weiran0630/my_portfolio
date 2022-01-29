@@ -43,7 +43,7 @@ const POST_FRAGMENT = gql`
 export const postsQuery = (first: number, skip: number): string => gql`
 	${POST_FRAGMENT}
 	query GetPosts {
-		posts(orderBy: createdAt_DESC, first: ${first}, skip: ${skip}) {
+		posts(orderBy: date_DESC, first: ${first}, skip: ${skip}) {
 			...PostDetails
 			intro
 		}
