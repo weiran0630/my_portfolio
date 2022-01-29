@@ -35,4 +35,6 @@
 
 <PreferedStack />
 
-<ProjectContainer {projects} />
+<div lang="zh-Hant-TW">
+	<ProjectContainer {projects} />
+</div>

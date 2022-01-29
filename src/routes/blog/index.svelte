@@ -42,8 +42,10 @@
 
 <h1 class="font-bold text-center my-10 text-5xl select-none">Blog Posts 📖</h1>
 
-{#each posts as post}
-	<PostCard {...post} />
-{/each}
+<div lang="zh-Hant-TW">
+	{#each posts as post}
+		<PostCard {...post} />
+	{/each}
+</div>
 
 <div use:inview={{}} on:change={handleChange} />

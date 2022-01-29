@@ -9,4 +9,4 @@
 	{@html style}
 </svelte:head>
 
-<HighlightSvelte class="mockup-code !pl-3 pt-7" code={text} />
+<HighlightSvelte class="mockup-code !pl-3 pt-7 !select-text" code={text} />
