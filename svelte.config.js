@@ -15,6 +15,9 @@ const config = {
 		vite: {
 			optimizeDeps: {
 				include: ['highlight.js/lib/core']
+			},
+			ssr: {
+				noExternal: ['@fortawesome/free-solid-svg-icons']
 			}
 		}
 	}
