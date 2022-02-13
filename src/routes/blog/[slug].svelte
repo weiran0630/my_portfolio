@@ -33,8 +33,8 @@
 </svelte:head>
 
 <article class="prose prose-lg select-none mb-48">
-	<a class=" no-underline flex items-center gap-2 text-xl mt-10" href="/blog">
-		<span class="text-2xl">⬅</span>Previous Page
+	<a class=" no-underline gap-2 text-lg mt-10 btn btn-ghost btn-sm rounded-btn" href="/blog">
+		<span class="text-xl">⬅</span>Previous Page
 	</a>
 	<figure>
 		<img src={coverImage.url} alt="" />
