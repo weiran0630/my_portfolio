@@ -20,7 +20,7 @@
 	import BackToTop from '$lib/components/back-to-top.svelte';
 	import Tags from '$lib/components/tags.svelte';
 	import SvelteMarkdown from 'svelte-markdown';
-	import Fa from 'svelte-fa';
+	import Fa from 'svelte-fa/src/fa.svelte';
 	import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 	import Code from '$lib/components/code.svelte';
 

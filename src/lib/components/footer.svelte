@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Fa from 'svelte-fa';
+	import Fa from 'svelte-fa/src/fa.svelte';
 	import { faFacebook, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 	import { faAt } from '@fortawesome/free-solid-svg-icons';
 </script>
@@ -69,7 +69,9 @@
 				<Fa size="2x" icon={faLinkedin} />
 			</a>
 
-			<a href="mailto:wei-ran@tuta.io"><Fa size="2x" icon={faAt} /></a>
+			<a href="mailto:wei-ran@tuta.io">
+				<Fa size="2x" icon={faAt} />
+			</a>
 		</div>
 	</div>
 </footer>
