@@ -3,17 +3,20 @@
 	import type { Load } from '@sveltejs/kit';
 	import type { Project } from '$lib/models/projects';
 	import type { Author } from '$lib/models/author';
+	import type { Tech } from '$lib/models/tech';
 	import { client } from '$lib/graphql-client';
-	import { authorsQuery, projectsQuery } from '$lib/queries';
+	import { authorsQuery, TechQuery, projectsQuery } from '$lib/queries';
 
 	export const load: Load = async () => {
-		const [{ authors }, { projects }] = await Promise.all([
-			client.request(authorsQuery),
-			client.request(projectsQuery)
-		]);
+		const [{ authors }, { projects }, { frontendTeches, backendTeches, miscTeches }] =
+			await Promise.all([
+				client.request(authorsQuery),
+				client.request(projectsQuery),
+				client.request(TechQuery)
+			]);
 
 		return {
-			props: { projects, authors }
+			props: { projects, authors, frontendTeches, backendTeches, miscTeches }
 		};
 	};
 </script>
@@ -21,10 +24,13 @@
 <script lang="ts">
 	import ProjectContainer from '$lib/components/project-container.svelte';
 	import AuthorContainer from '$lib/components/author-container.svelte';
-	import PreferedStack from '$lib/components/prefered-stack.svelte';
+	import TechStacks from '$lib/components/tech-stacks.svelte';
 
 	export let projects: Project[];
 	export let authors: Author[];
+	export let frontendTeches: Tech[];
+	export let backendTeches: Tech[];
+	export let miscTeches: Tech[];
 </script>
 
 <svelte:head>
@@ -33,7 +39,7 @@
 
 <AuthorContainer {authors} />
 
-<PreferedStack />
+<TechStacks {frontendTeches} {backendTeches} {miscTeches} />
 
 <div lang="zh-Hant-TW">
 	<ProjectContainer {projects} />

@@ -66,3 +66,26 @@ export const postQuery = gql`
 		}
 	}
 `;
+
+export const TechQuery = gql`
+	query GetTeches {
+		frontendTeches {
+			name
+			icon {
+				url
+			}
+		}
+		backendTeches {
+			name
+			icon {
+				url
+			}
+		}
+		miscTeches {
+			name
+			icon {
+				url
+			}
+		}
+	}
+`;

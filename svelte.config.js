@@ -1,4 +1,5 @@
 import adapter from '@sveltejs/adapter-auto';
+import svg from '@poppanator/sveltekit-svg';
 import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -14,7 +15,8 @@ const config = {
 		vite: {
 			optimizeDeps: {
 				include: ['highlight.js/lib/core']
-			}
+			},
+			plugins: [svg()]
 		}
 	}
 };

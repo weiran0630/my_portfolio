@@ -9,7 +9,7 @@
 	export let tags: string[] = [];
 </script>
 
-<div class="card sm:w-72 card-bordered shadow-sm">
+<div class="card sm:w-72 card-bordered shadow-sm bg-primary-content">
 	<figure><a href={demo}><img src={url} alt={name} /></a></figure>
 	<div class="card-body">
 		<a href={demo}>

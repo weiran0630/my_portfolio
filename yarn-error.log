@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add -D svelte-inview @types/svelte-inview
+  /usr/local/bin/node /usr/local/bin/yarn add -D rollup-plugin-svelte-scg
 
 PATH: 
-  /Users/zhuweiran/google-cloud-sdk/bin:/Users/zhuweiran/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/go/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/zhuweiran/google-cloud-sdk/bin:/usr/local/anaconda3/condabin:/Users/zhuweiran/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Users/zhuweiran/.cargo/bin:/Users/zhuweiran/.fig/bin:/usr/local/go:/Users/zhuweiran/go:/Users/zhuweiran/go/bin:/usr/local/sbin:/Users/zhuweiran/flutter/bin:/usr/local/go:/usr/local/go/bin:/Users/zhuweiran/go:/Users/zhuweiran/go/bin:/usr/local/sbin:/Users/zhuweiran/flutter/bin
+  /Users/zhuweiran/google-cloud-sdk/bin:/Users/zhuweiran/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/usr/local/go/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/zhuweiran/google-cloud-sdk/bin:/usr/local/anaconda3/condabin:/Users/zhuweiran/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/3.9/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/Users/zhuweiran/.cargo/bin:/usr/local/go:/Users/zhuweiran/go:/Users/zhuweiran/go/bin:/usr/local/sbin:/Users/zhuweiran/flutter/bin:/usr/local/go:/usr/local/go/bin:/Users/zhuweiran/go:/Users/zhuweiran/go/bin:/usr/local/sbin:/Users/zhuweiran/flutter/bin
 
 Yarn version: 
   1.22.17
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fsvelte-inview: Not found
+  Error: https://registry.yarnpkg.com/rollup-plugin-svelte-scg: Not found
       at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:67029:18)
       at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140883:22)
       at Request.emit (events.js:400:28)
@@ -42,7 +42,7 @@ npm manifest:
     },
     "devDependencies": {
       "@fortawesome/free-brands-svg-icons": "^5.15.4",
-      "@fortawesome/free-solid-svg-icons": "^5.15.4",
+      "@fortawesome/free-solid-svg-icons": "^6.0.0",
       "@sveltejs/adapter-auto": "next",
       "@sveltejs/kit": "next",
       "@tailwindcss/typography": "^0.5.0",
@@ -130,6 +130,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.36.tgz#b44e52db3b6b20523e0c57ef8c42d315532cb903"
     integrity sha512-a/7BiSgobHAgBWeN7N0w+lAhInrGxksn13uK7231n2m8EDPE3BMCl9NZLTGrj9ZXfCmC6LM0QLqXidIizVQ6yg==
   
+  "@fortawesome/fontawesome-common-types@^0.3.0":
+    version "0.3.0"
+    resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.3.0.tgz#949995a05c0d8801be7e0a594f775f1dbaa0d893"
+    integrity sha512-CA3MAZBTxVsF6SkfkHXDerkhcQs0QPofy43eFdbWJJkZiq3SfiaH1msOkac59rQaqto5EqWnASboY1dBuKen5w==
+  
   "@fortawesome/free-brands-svg-icons@^5.15.4":
     version "5.15.4"
     resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.15.4.tgz#ec8a44dd383bcdd58aa7d1c96f38251e6fec9733"
@@ -137,12 +142,12 @@ Lockfile:
     dependencies:
       "@fortawesome/fontawesome-common-types" "^0.2.36"
   
-  "@fortawesome/free-solid-svg-icons@^5.15.4":
-    version "5.15.4"
-    resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.15.4.tgz#2a68f3fc3ddda12e52645654142b9e4e8fbb6cc5"
-    integrity sha512-JLmQfz6tdtwxoihXLg6lT78BorrFyCf59SAwBM6qV/0zXyVeDygJVb3fk+j5Qat+Yvcxp1buLTY5iDh1ZSAQ8w==
+  "@fortawesome/free-solid-svg-icons@^6.0.0":
+    version "6.0.0"
+    resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-6.0.0.tgz#bed4a501b631c6cfa35c09830f7cb63ffca1589d"
+    integrity sha512-o4FZ1XbndcgeWNb8Wh0y+Hgf73CjmyOQowUSaqQCtgIIdS+XliSBSOwCl330wER+I6CGYE96hT27bHBPmzX2Gg==
     dependencies:
-      "@fortawesome/fontawesome-common-types" "^0.2.36"
+      "@fortawesome/fontawesome-common-types" "^0.3.0"
   
   "@humanwhocodes/config-array@^0.5.0":
     version "0.5.0"

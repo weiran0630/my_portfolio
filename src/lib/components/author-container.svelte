@@ -10,7 +10,7 @@
 	} = authors[0];
 </script>
 
-<div class="mb-24 flex flex-col select-none">
+<div class="mb-48 flex flex-col select-none">
 	<h1 class="font-bold text-center mb-20 mt-10  text-5xl">Welcome to my Portfolio 😆</h1>
 
 	<div class="flex flex-wrap md:flex-nowrap justify-center items-center md:justify-start">
