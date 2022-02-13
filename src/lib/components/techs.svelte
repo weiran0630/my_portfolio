@@ -31,7 +31,7 @@
 <div class="stat bg-primary-content">
 	<h2 class="stat-title text-center">{title}</h2>
 	{#key tech.name}
-		<div class={`stat-value ${fontColor} flex flex-col items-center gap-2`} in:fade>
+		<div class={`stat-value ${fontColor} flex flex-col items-center gap-2 my-3`} in:fade>
 			<div>
 				{tech.name}
 			</div>
