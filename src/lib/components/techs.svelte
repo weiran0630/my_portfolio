@@ -1,8 +1,7 @@
 <script lang="ts">
-	import type { Tech } from '$lib/models/tech';
-
 	import { onDestroy } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import type { Tech } from '$lib/models/tech';
 
 	export let title: string;
 	export let teches: Tech[] = [];
@@ -19,19 +18,37 @@
 	}
 
 	let index = 0;
-	const interval = setInterval(() => {
+	function moveIndex() {
 		index = (index + 1) % teches.length;
+	}
+
+	let interval = setInterval(() => {
+		moveIndex();
 	}, 3000);
+
+	function pause() {
+		clearInterval(interval);
+	}
+
+	function resume() {
+		moveIndex();
+		interval = setInterval(() => {
+			moveIndex();
+		}, 3000);
+	}
 
 	onDestroy(() => clearInterval(interval));
 
 	$: tech = teches[index];
 </script>
 
-<div class="stat bg-primary-content">
+<div class="stat bg-primary-content" on:mouseover={pause} on:focus={pause} on:mouseleave={resume}>
 	<h2 class="stat-title text-center">{title}</h2>
 	{#key tech.name}
-		<div class={`stat-value ${fontColor} flex flex-col items-center gap-2 my-3`} in:fade>
+		<div
+			class={`stat-value ${fontColor} flex flex-col items-center gap-2 my-3  hover:scale-110`}
+			in:fade
+		>
 			<div>
 				{tech.name}
 			</div>
