@@ -20,4 +20,5 @@ export interface Post {
 	tags: string[];
 	coverImage: CoverImage;
 	authors: Author[];
+	minsToRead: number;
 }

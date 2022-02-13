@@ -20,10 +20,12 @@
 	import BackToTop from '$lib/components/back-to-top.svelte';
 	import Tags from '$lib/components/tags.svelte';
 	import SvelteMarkdown from 'svelte-markdown';
+	import Fa from 'svelte-fa';
+	import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 	import Code from '$lib/components/code.svelte';
 
 	export let post: Post;
-	const { title, date, tags, content, coverImage, authors } = post;
+	const { title, date, tags, content, coverImage, authors, minsToRead } = post;
 </script>
 
 <svelte:head>
@@ -55,6 +57,9 @@
 			<div class="flex flex-col">
 				<span class="font-bold"><span class="font-light">Author:</span> {authors[0].name}</span>
 				<span class="block font-light text-sm">{date} </span>
+				<span class="block font-light text-sm">
+					<Fa icon={faBookOpen} class="inline mt-2 mr-1" /> {minsToRead} mins read</span
+				>
 			</div>
 		</div>
 	</div>

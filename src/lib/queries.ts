@@ -56,6 +56,7 @@ export const postQuery = gql`
 		post(where: { slug: $slug }) {
 			...PostDetails
 			content
+			minsToRead
 			authors {
 				name
 				picture {
