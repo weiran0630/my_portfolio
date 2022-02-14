@@ -5,6 +5,7 @@ export const authorsQuery = gql`
 		authors {
 			name
 			intro
+			iam
 			slug
 			picture {
 				url
