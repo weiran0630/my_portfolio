@@ -36,7 +36,13 @@ const sitemap = (blogs) =>
       xmlns:video="https://www.google.com/schemas/sitemap-video/1.1"
     >
       <url>
-        <loc>https://edison-web-dev.vercel.app/</loc>
+        <loc>https://edison-web-dev.vercel.app</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+      </url>
+
+      <url>
+        <loc>https://edison-web-dev.vercel.app/blog</loc>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>
       </url>
