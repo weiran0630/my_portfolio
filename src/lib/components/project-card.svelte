@@ -12,7 +12,7 @@
 </script>
 
 <div
-	class="card sm:w-72 card-bordered shadow-sm bg-primary-content hover:-translate-y-6 hover:scale-110 hover:z-10 hover:shadow-2xl delay-75"
+	class="card sm:w-72 card-bordered shadow-sm bg-primary-content hover:-translate-y-6 hover:scale-110 hover:z-10 hover:shadow-2xl transition delay-75"
 >
 	<figure><a href={demo}><img src={url} alt={name} /></a></figure>
 	<div class="card-body">

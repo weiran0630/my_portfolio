@@ -46,7 +46,7 @@
 	<h2 class="stat-title text-center">{title}</h2>
 	{#key tech.name}
 		<div
-			class={`stat-value ${fontColor} flex flex-col items-center gap-2 my-3  hover:scale-110`}
+			class={`stat-value ${fontColor} flex flex-col items-center gap-2 my-3  hover:scale-110 transition`}
 			in:fade
 		>
 			<div>

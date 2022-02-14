@@ -6,7 +6,7 @@
 
 <footer class="px-10 pb-10 footer bg-neutral text-neutral-content">
 	<div class="max-w-5xl mx-auto">
-		<a href="https://kit.svelte.dev/">
+		<a href="https://kit.svelte.dev/" class="hover:scale-125 transition">
 			<svg
 				height="50px"
 				width="50px"
@@ -48,28 +48,32 @@
 			</svg>
 		</a>
 
-		<p>
-			Created with <a class="font-bold" href="https://kit.svelte.dev/">Svelte Kit</a>
+		<p class="select-none">
+			Created with <a class="font-bold hover:underline" href="https://kit.svelte.dev/">Svelte Kit</a
+			>
 			<br />a framework for building web applications of all sizes
 		</p>
 	</div>
 
 	<div class="mx-auto">
-		<span class="footer-title">Contact me</span>
+		<span class="footer-title select-none">Contact me</span>
 		<div class="grid grid-flow-col gap-4">
-			<a href="https://www.facebook.com/shio.asanagi/">
+			<a href="https://www.facebook.com/shio.asanagi/" class="hover:scale-125 transition">
 				<Fa size="2x" icon={faFacebook} />
 			</a>
 
-			<a href="https://github.com/weiran0630">
+			<a href="https://github.com/weiran0630" class="hover:scale-125 transition">
 				<Fa size="2x" icon={faGithub} />
 			</a>
 
-			<a href="https://www.linkedin.com/in/edison-chue-b16712210/">
+			<a
+				href="https://www.linkedin.com/in/edison-chue-b16712210/"
+				class="hover:scale-125 transition"
+			>
 				<Fa size="2x" icon={faLinkedin} />
 			</a>
 
-			<a href="mailto:wei-ran@tuta.io">
+			<a href="mailto:wei-ran@tuta.io" class="hover:scale-125 transition">
 				<Fa size="2x" icon={faAt} />
 			</a>
 		</div>
