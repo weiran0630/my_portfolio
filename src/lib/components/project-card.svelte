@@ -1,7 +1,5 @@
 <script lang="ts">
 	import Tags from './tags.svelte';
-	import { fade, blur, fly, slide, scale } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
 
 	export let url = '';
 	export let name = '';
@@ -14,7 +12,12 @@
 <div
 	class="card sm:w-72 card-bordered shadow-sm bg-primary-content hover:-translate-y-6 hover:scale-110 hover:z-10 hover:shadow-2xl transition delay-75"
 >
-	<figure><a href={demo}><img src={url} alt={name} /></a></figure>
+	<figure>
+		<a href={demo}>
+			<img src={url} alt={name} />
+		</a>
+	</figure>
+
 	<div class="card-body">
 		<a href={demo}>
 			<h2 class="card-titles font-bold text-lg mb-2 select-none">{name}</h2>

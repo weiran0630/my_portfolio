@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
 	import type { Post } from '$lib/models/post';
-	import { client } from '$lib/graphql-client';
-	import { postsQuery } from '$lib/queries';
+	import { client } from '$lib/shared/graphql-client';
+	import { postsQuery } from '$lib/shared/queries';
 
 	export const load = async () => {
 		const { posts } = await client.request(postsQuery(5, 0));
@@ -17,6 +17,7 @@
 <script lang="ts">
 	import PostCard from '$lib/components/post-card.svelte';
 	import { inview } from 'svelte-inview/dist/index';
+	import BackToTop from '$lib/components/back-to-top.svelte';
 
 	export let posts: Post[];
 	let pageSize = 5;
@@ -49,3 +50,5 @@
 </div>
 
 <div use:inview={{}} on:change={handleChange} />
+
+<BackToTop />

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Tags from './tags.svelte';
-	import { fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 
 	export let title: string = '';
 	export let slug: string = '';
@@ -10,7 +10,7 @@
 
 <div
 	class="card lg:card-side select-none btn-ghost hover:bg-opacity-5 transition duration-150"
-	in:fly={{ y: 100, duration: 500 }}
+	in:fade={{ duration: 300 }}
 >
 	<div class="card-body">
 		<h2 class="card-title">{title}</h2>

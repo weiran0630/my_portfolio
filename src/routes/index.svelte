@@ -4,8 +4,8 @@
 	import type { Project } from '$lib/models/projects';
 	import type { Author } from '$lib/models/author';
 	import type { Tech } from '$lib/models/tech';
-	import { client } from '$lib/graphql-client';
-	import { authorsQuery, TechQuery, projectsQuery } from '$lib/queries';
+	import { client } from '$lib/shared/graphql-client';
+	import { authorsQuery, TechQuery, projectsQuery } from '$lib/shared/queries';
 
 	export const load: Load = async () => {
 		const [{ authors }, { projects }, { frontendTeches, backendTeches, miscTeches }] =
@@ -25,6 +25,7 @@
 	import ProjectContainer from '$lib/components/project-container.svelte';
 	import AuthorContainer from '$lib/components/author-container.svelte';
 	import TechStacks from '$lib/components/tech-stacks.svelte';
+	import { fade } from 'svelte/transition';
 
 	export let projects: Project[];
 	export let authors: Author[];
@@ -37,10 +38,12 @@
 	<title>🚀 Edison | Web Dev Portfolio</title>
 </svelte:head>
 
-<AuthorContainer {authors} />
+<div in:fade={{ duration: 300 }}>
+	<AuthorContainer {authors} />
 
-<TechStacks {frontendTeches} {backendTeches} {miscTeches} />
+	<TechStacks {frontendTeches} {backendTeches} {miscTeches} />
 
-<div lang="zh-Hant-TW">
-	<ProjectContainer {projects} />
+	<div lang="zh-Hant-TW">
+		<ProjectContainer {projects} />
+	</div>
 </div>
