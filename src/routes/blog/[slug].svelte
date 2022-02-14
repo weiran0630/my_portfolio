@@ -33,7 +33,10 @@
 </svelte:head>
 
 <article class="prose prose-lg select-none mb-48">
-	<a class=" no-underline gap-2 text-lg mt-10 btn btn-ghost btn-sm rounded-btn" href="/blog">
+	<a
+		class=" no-underline gap-2 text-lg mt-10 btn btn-ghost btn-sm rounded-btn hover:scale-105"
+		href="/blog"
+	>
 		<span class="text-xl">⬅</span>Previous Page
 	</a>
 	<figure>

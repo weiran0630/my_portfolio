@@ -8,7 +8,10 @@
 	export let tags: string[] = [];
 </script>
 
-<div class="card lg:card-side select-none" in:fly={{ y: 100, duration: 500 }}>
+<div
+	class="card lg:card-side select-none btn-ghost hover:bg-opacity-5 transition duration-150"
+	in:fly={{ y: 100, duration: 500 }}
+>
 	<div class="card-body">
 		<h2 class="card-title">{title}</h2>
 		<p class="text-sm">
@@ -18,7 +21,10 @@
 			<div class="flex gap-2 flex-wrap mt-3">
 				<Tags {tags} variant="secondary" />
 			</div>
-			<a class="btn btn-primary btn-sm ml-auto" href={`/blog/${slug}`}>Read More</a>
+			<a
+				class="btn btn-primary btn-sm ml-auto hover:scale-105 hover:text-secondary-content"
+				href={`/blog/${slug}`}>Read More</a
+			>
 		</div>
 	</div>
 </div>
