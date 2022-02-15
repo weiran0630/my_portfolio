@@ -15,7 +15,7 @@
 	let index = 0;
 	let interval = setInterval(() => {
 		index = (index + 1) % iam.length;
-	}, 4000);
+	}, 2000);
 
 	onDestroy(() => clearInterval(interval));
 
