@@ -44,6 +44,13 @@
 <h1 class="font-bold text-center my-10 text-5xl select-none">Blog Posts 📖</h1>
 
 <div lang="zh-Hant-TW">
+	<!-- Google Adsense -->
+	<script
+		async
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7835663020534916"
+		crossorigin="anonymous">
+	</script>
+
 	{#each posts as post}
 		<PostCard {...post} />
 	{/each}
