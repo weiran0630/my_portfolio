@@ -23,6 +23,7 @@
 	import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 	import Code from '$lib/components/code.svelte';
 	import BackToTop from '$lib/components/back-to-top.svelte';
+	import Adsense from '$lib/components/adsense.svelte';
 
 	export let post: Post;
 	const { title, date, tags, content, coverImage, authors, minsToRead } = post;
@@ -74,11 +75,7 @@
 	<SvelteMarkdown source={content} renderers={{ code: Code }} />
 
 	<!-- Google Adsense -->
-	<script
-		async
-		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7835663020534916"
-		crossorigin="anonymous">
-	</script>
+	<Adsense />
 </article>
 
 <BackToTop />
