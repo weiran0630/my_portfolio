@@ -47,7 +47,4 @@
 	<div lang="zh-Hant-TW">
 		<ProjectContainer {projects} />
 	</div>
-
-	<!-- Google Adsense -->
-	<Adsense />
 </div>

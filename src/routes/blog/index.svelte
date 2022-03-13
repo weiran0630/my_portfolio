@@ -18,7 +18,6 @@
 	import PostCard from '$lib/components/post-card.svelte';
 	import { inview } from 'svelte-inview/dist/index';
 	import BackToTop from '$lib/components/back-to-top.svelte';
-	import Adsense from '$lib/components/adsense.svelte';
 
 	export let posts: Post[];
 	let pageSize = 5;
@@ -45,9 +44,6 @@
 <h1 class="font-bold text-center my-10 text-5xl select-none">Blog Posts 📖</h1>
 
 <div lang="zh-Hant-TW">
-	<!-- Google Adsense -->
-	<Adsense />
-
 	{#each posts as post}
 		<PostCard {...post} />
 	{/each}

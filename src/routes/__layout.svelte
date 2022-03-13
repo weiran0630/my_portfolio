@@ -6,7 +6,6 @@
 	import { themeChange } from 'theme-change';
 	import '../app.css';
 	import Navbar from '$lib/components/navbar.svelte';
-	import Adsense from '$lib/components/adsense.svelte';
 	import Wave from '$lib/components/wave.svelte';
 
 	onMount(() => {
@@ -19,7 +18,6 @@
 
 	<PageTransitions refresh={$page.url.pathname}>
 		<slot />
-		<Adsense />
 	</PageTransitions>
 </main>
 
