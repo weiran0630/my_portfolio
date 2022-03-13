@@ -22,6 +22,9 @@
 	</PageTransitions>
 </main>
 
-<Wave />
+<div class="relative top-[1px]">
+	<Wave />
+</div>
+
 <Footer />
 <BackToTop />

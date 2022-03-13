@@ -4,9 +4,9 @@
 	import { faAt } from '@fortawesome/free-solid-svg-icons';
 </script>
 
-<footer class="px-10 pb-10 footer bg-neutral text-neutral-content">
+<footer class="px-10 pb-10 pt-1 footer bg-neutral text-neutral-content z-99">
 	<div class="max-w-5xl mx-auto">
-		<a href="https://kit.svelte.dev/" class="hover:scale-125 transition">
+		<a href="https://kit.svelte.dev/" class="hover:scale-125 transition ">
 			<svg
 				height="50px"
 				width="50px"
