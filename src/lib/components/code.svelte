@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { HighlightSvelte } from 'svelte-highlight';
-	import style from 'svelte-highlight/src/styles/atom-one-dark';
+	import style from 'svelte-highlight/src/styles/material-palenight';
 	import Fa from 'svelte-fa/src/fa.svelte';
 	import { faCopy } from '@fortawesome/free-solid-svg-icons';
 
