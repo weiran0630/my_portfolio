@@ -7,6 +7,7 @@
 	import '../app.css';
 	import Navbar from '$lib/components/navbar.svelte';
 	import Wave from '$lib/components/wave.svelte';
+	import BackToTop from '$lib/components/back-to-top.svelte';
 
 	onMount(() => {
 		themeChange(false);
@@ -23,3 +24,4 @@
 
 <Wave />
 <Footer />
+<BackToTop />

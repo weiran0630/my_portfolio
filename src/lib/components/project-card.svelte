@@ -10,7 +10,7 @@
 </script>
 
 <div
-	class="card sm:w-72 card-bordered shadow-sm bg-primary-content hover:-translate-y-6 hover:scale-110 hover:z-10 hover:shadow-2xl transition delay-75"
+	class="card sm:w-72 card-bordered shadow-sm bg-primary-content hover:-translate-y-6 hover:scale-105 hover:drop-shadow-2xl transition ease-in-out"
 >
 	<figure>
 		<a href={demo}>

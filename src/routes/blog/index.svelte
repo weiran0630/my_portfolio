@@ -17,7 +17,6 @@
 <script lang="ts">
 	import PostCard from '$lib/components/post-card.svelte';
 	import { inview } from 'svelte-inview/dist/index';
-	import BackToTop from '$lib/components/back-to-top.svelte';
 
 	export let posts: Post[];
 	let pageSize = 5;
@@ -50,5 +49,3 @@
 </div>
 
 <div use:inview={{}} on:change={handleChange} />
-
-<BackToTop />

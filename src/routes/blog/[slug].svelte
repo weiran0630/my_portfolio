@@ -22,7 +22,6 @@
 	import Fa from 'svelte-fa/src/fa.svelte';
 	import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 	import Code from '$lib/components/code.svelte';
-	import BackToTop from '$lib/components/back-to-top.svelte';
 
 	export let post: Post;
 	const { title, date, tags, content, coverImage, authors, minsToRead } = post;
@@ -73,5 +72,3 @@
 
 	<SvelteMarkdown source={content} renderers={{ code: Code }} />
 </article>
-
-<BackToTop />
