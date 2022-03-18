@@ -26,7 +26,6 @@
 	import AuthorContainer from '$lib/components/author-container.svelte';
 	import TechStacks from '$lib/components/tech-stacks.svelte';
 	import { fade } from 'svelte/transition';
-	import Adsense from '$lib/components/adsense.svelte';
 
 	export let projects: Project[];
 	export let authors: Author[];
