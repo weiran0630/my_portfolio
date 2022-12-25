@@ -13,7 +13,10 @@ const config = {
 		}
 	},
 
-	plugins: [require('@tailwindcss/typography'), require('daisyui')]
+	plugins: [require('@tailwindcss/typography'), require('daisyui')],
+  daisyui: {
+    themes: ['cupcake', 'halloween'],
+  },
 };
 
 module.exports = config;

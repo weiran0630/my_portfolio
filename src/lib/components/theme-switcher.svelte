@@ -7,7 +7,7 @@
 
 <div class="flex gap-1 mt-1">
 	<span class="label-text text-lg pb-2">☀️</span>
-	<button data-toggle-theme="cupcake,synthwave" data-act-class="ACTIVECLASS">
+	<button data-toggle-theme="cupcake,halloween" data-act-class="ACTIVECLASS">
 		<input
 			type="checkbox"
 			class="toggle toggle-primary"
