@@ -3,6 +3,7 @@ export interface WorkExperience {
   jobTitle: string;
   image: Picture;
   description: string;
+  workingWith?: string[]
 }
 
 interface Picture {

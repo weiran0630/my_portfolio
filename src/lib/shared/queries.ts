@@ -100,6 +100,7 @@ export const WorkExperienceQuery = gql`
       }
       jobTitle
       description
+      workingWith
     }
   }
 `
