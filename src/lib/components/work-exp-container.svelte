@@ -4,9 +4,9 @@
 	export let workExperiences: WorkExperience[];
 </script>
 
-<h1 class="text-5xl font-bold text-center mb-10">Work Experiences 💼</h1>
+<h1 class="text-5xl font-bold text-center mb-10 select-none">Work Experiences 💼</h1>
 
-<div class="mb-48">
+<div class="mb-48 select-none">
 	{#each workExperiences as { company, jobTitle, image, description }}
 		<div class="card card-side bg-base-100 flex">
 			<figure class="w-2">

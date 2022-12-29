@@ -6,7 +6,7 @@
 	export let miscTeches: Tech[] = [];
 </script>
 
-<h1 class="text-5xl font-bold text-center mb-10">Tech && Skillset 🛠</h1>
+<h1 class="text-5xl font-bold text-center mb-10 select-none">Tech && Skillset 🛠</h1>
 <div class="stats stats flex flex-wrap sm:flex-nowrap mx-auto mb-48 select-none">
 	<TechsView teches={frontendTeches} title="FRONTEND TECH" primary />
 	<TechsView teches={backendTeches} title="BACKEND TECH" secondary />
