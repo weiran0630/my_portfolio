@@ -90,3 +90,16 @@ export const TechQuery = gql`
 		}
 	}
 `;
+
+export const WorkExperienceQuery = gql`
+  query GetWorkExperiences {
+    workExperiences {
+      company
+      image {
+        url
+      }
+      jobTitle
+      description
+    }
+  }
+`
